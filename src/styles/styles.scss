@@ -1,0 +1,67 @@
+//purple
+$darkP: #462a68;
+$mediumP: #56377c;
+$lightP: #6d41a1;
+$pText: #9a81b8;
+
+html {
+    background-color: $darkP;
+}
+img {
+    height: 194px;
+}
+
+.search {
+    color: $pText;
+    transition: 1s;
+    &__form {
+        .mask {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 2;
+            top: 0;
+        }
+        position: relative;
+        padding: 6em 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-size: cover;
+        background-position-y: -780px;
+        background-attachment: fixed;
+        background-image: url("../../media/bc.jpg");
+    }
+    &__input-container {
+        z-index: 3;
+    }
+    &__select-container {
+        z-index: 3;
+    }
+    &__results {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__total {
+        text-align: center;
+        padding: 2em 0;
+    }
+    &__books {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 22%);
+        justify-content: space-between;
+    }
+    &__book-card {
+        flex: 0 1 22%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

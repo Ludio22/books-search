@@ -1,1 +1,99 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+html {
+  background-color: #462a68;
+}
+
+img {
+  height: 194px;
+}
+
+.search {
+  color: #9a81b8;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.search__form {
+  position: relative;
+  padding: 6em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: cover;
+  background-position-y: -780px;
+  background-attachment: fixed;
+  background-image: url("../../media/bc.jpg");
+}
+
+.search__form .mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  top: 0;
+}
+
+.search__input-container {
+  z-index: 3;
+}
+
+.search__select-container {
+  z-index: 3;
+}
+
+.search__results {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search__total {
+  text-align: center;
+  padding: 2em 0;
+}
+
+.search__books {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (22%)[4];
+      grid-template-columns: repeat(4, 22%);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.search__book-card {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 22%;
+          flex: 0 1 22%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+/*# sourceMappingURL=styles.css.map */
