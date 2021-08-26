@@ -17,9 +17,10 @@ const SearchPage = () => {
 
     //Активация запроса по нажатию на Enter
     const setOnKeyName = (e) => {
-        const params = {subject: state.category, name: state.bookName, index: state.curPage, order: state.order};
+        const params = {subject: state.category, name: state.bookName, index: 0, order: state.order};
         if (e.charCode === 13) {
             dispatch(clearData());
+            dispatch(zeroPages());
             if(params.name !== ""){
                 dispatch(getBooks(params));
             }
@@ -28,8 +29,9 @@ const SearchPage = () => {
 
     //Активация запроса по нажатию на input
     const setBooks = () => {
-        const params = {subject: state.category, name: state.bookName, index: state.curPage, order: state.order};
+        const params = {subject: state.category, name: state.bookName, index: 0, order: state.order};
         dispatch(clearData());
+        dispatch(zeroPages());
         if(params.name !== ""){
             dispatch(getBooks(params));
         }
@@ -47,7 +49,7 @@ const SearchPage = () => {
         dispatch(setOrder(e.target.value));
         dispatch(clearData());
         dispatch(zeroPages());
-        const params = {subject: state.category, name: state.bookName, index: state.curPage, order: e.target.value};
+        const params = {subject: state.category, name: state.bookName, index: 0, order: e.target.value};
         if(params.name !== ""){
             dispatch(getBooks(params));
         }
@@ -57,7 +59,7 @@ const SearchPage = () => {
         dispatch(setCategory(e.target.value));
         dispatch(clearData());
         dispatch(zeroPages());
-        const params = {subject: e.target.value, name: state.bookName, index: state.curPage, order: state.order};
+        const params = {subject: e.target.value, name: state.bookName, index: 0, order: state.order};
         if(params.name !== ""){
             dispatch(getBooks(params));
         }

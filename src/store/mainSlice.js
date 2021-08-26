@@ -56,10 +56,10 @@ export const MainSlice = createSlice({
         [getBooks.fulfilled]: (state, action) => {
             action.payload.items.forEach(element => {
                 state.data.push(element);
-                console.log(element.volumeInfo.publishedDate);
+                console.log(element.volumeInfo);
             });
             state.totalBook = action.payload.totalItems;
-            state.curIndex++;
+            state.curPage += 30;
             state.loading = false;
         }
     },
