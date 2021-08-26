@@ -5,7 +5,7 @@ const BooksContainer = (props) => {
     return(
         <div className="search__results">
             {!props.isEmpty && <h2 className="search__total">Найдено книг: {props.totalBook}</h2> }
-            <div className="search__books" style={{display: "flex", flexWrap: "wrap"}}>
+            <div className="search__books">
                 {props.books}
             </div>
             {props.isLoad && <Preloader />}
