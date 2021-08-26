@@ -4,6 +4,7 @@ import Sorting from './Sorting';
 const SearchFrom = (props) => {
     return(
         <div className="search__form">
+          <div className="mask"></div>
           <div className="search__input-container">
             <input 
               className="search__input" 
