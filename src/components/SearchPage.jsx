@@ -4,6 +4,7 @@ import { clearData, getBooks, setBookName, setCategory, setOrder, zeroPages } fr
 import BookCard from './books-container/BookCard';
 import BooksContainer from './books-container/BooksContainer';
 import SearchFrom from './search-form/SearchForm';
+import Zoom from 'react-reveal/Zoom';
 
 const SearchPage = () => {
     const state = useSelector(state => state.data);
@@ -66,13 +67,19 @@ const SearchPage = () => {
     }
 
     if (state.data.length !== 0) {
-        books = state.data.map(el => <BookCard 
-            key={el.index} 
-            img={(el.volumeInfo.imageLinks !== undefined) ? el.volumeInfo.imageLinks.smallThumbnail : "https://bitsofco.de/content/images/2018/12/Screenshot-2018-12-16-at-21.06.29.png"}
-            name={el.volumeInfo.title}
-            categories={el.volumeInfo.categories}
-            data={el.volumeInfo.publishedDate}
-            authors={el.volumeInfo.authors} />);
+        books = state.data.map(el => 
+        <Zoom>
+            <div>
+            <BookCard 
+                key={el.id}
+                id={el.id} 
+                img={(el.volumeInfo.imageLinks !== undefined) ? el.volumeInfo.imageLinks.smallThumbnail : null}
+                name={el.volumeInfo.title}
+                categories={el.volumeInfo.categories}
+                data={el.volumeInfo.publishedDate}
+                authors={el.volumeInfo.authors} />
+            </div>
+        </Zoom>);
     }
 
     return(
