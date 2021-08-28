@@ -1,4 +1,28 @@
-# Getting Started with Create React App
+## How I worked on this project
+
+The project was made according to the technical requirements for the test task (I do not disclose details)
+
+* I used the react / redux bundle and several additional libraries to build the application.
+* Component animation was done using [react-reveal](https://www.react-reveal.com/) library.
+* Createasyncthunk from redux / toolkit was used for asynchronous operations
+
+## How to navigate this project
+
+* Main logic and data of the project [Example](https://github.com/Ludio22/books-search/blob/main/src/store/mainSlice.js)
+* All SCSS styles are [here](https://github.com/Ludio22/books-search/blob/main/src/styles/styles.scss)
+* All data taken from google books api is in the slice from the first link
+
+## Why i build project this way
+
+* Using redux for storing state seems to me a very convenient solution, which allows you to focus on each part of the program separately, so I will not dwell on this.
+* I have not used style libraries like bootstrap (apart from react-reveal) because I prefer to write all the styles myself, I like to have full control over the components.
+
+## If I have more time I would change this
+
+* It would be nice to polish the styles. The layout does not break but is not as good as we would like.
+* I would put additional functions for interacting with elements in a separate file, but this will take more time.
+ 
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
