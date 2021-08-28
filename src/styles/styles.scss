@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
+
 //purple
 $darkP: #462a68;
 $mediumP: #56377c;
@@ -11,17 +13,15 @@ html {
 a {
     cursor: pointer;
 }
-
-img {
-    height: 195px;
-    box-shadow: 15px 15px 10px #462a68;
-    margin-bottom: 2em;
-    max-width: 190px;
-    transition: 1s;
-    &:hover {
-        cursor: pointer;
-    }
+ 
+.error {
+    text-align: center;
+    margin-top: 4em;
+    font-size: 2em;
+    font-weight: bold;
+    color: $pText;
 }
+
 .img__wrapper {
     height: 195px;
     margin-bottom: 2em;
@@ -33,6 +33,7 @@ img {
 
 select {
     padding: 6px 1em;
+    font-family: "Noto Sans JP", sans-serif;
     font-size: 1em;
     color: #9a81b8;
     border: 1px solid;
@@ -43,6 +44,16 @@ select {
 }
 
 .search {
+    img {
+        height: 195px;
+        box-shadow: 15px 15px 10px #462a68;
+        margin-bottom: 2em;
+        max-width: 190px;
+        transition: 1s;
+        &:hover {
+            cursor: pointer;
+        }
+    }
     color: $pText;
     transition: 1s;
     &__form {
@@ -91,6 +102,7 @@ select {
     }
     &__total {
         text-align: center;
+        font-family: "Noto Sans JP", sans-serif;
         padding: 2em 0;
     }
     &__books {
@@ -101,6 +113,7 @@ select {
         gap: 2em;
     }
     &__book-card {
+        font-family: "Noto Sans JP", sans-serif;
         flex: 0 1 22%;
         display: flex;
         flex-direction: column;
@@ -132,6 +145,7 @@ select {
         justify-content: space-between;
         input {
             padding: 8px 1em;
+            font-family: "Noto Sans JP", sans-serif;
             font-size: 1.5em;
             color: #9a81b8;
             border: 1px solid;
@@ -150,5 +164,40 @@ select {
     &__input {
         width: 60%;
         padding: 0 1em;
+    }
+}
+
+.book {
+    img {
+        width: 486px;
+    }
+    &__info {
+        font-family: "Noto Sans JP", sans-serif;
+        width: 50%;
+    }
+    .wrapper {
+        width: 100%;
+        display: flex;
+        color: #baaacc;
+        flex-direction: column;
+        padding: 1em;
+        background-color: #632ca5;
+        justify-content: space-evenly;
+        .search__book-autors {
+            margin: 2em 0;
+        }
+        div {
+            background-color: #462a68;
+            padding: 2em;
+            text-align: justify;
+            margin-top: 4em;
+        }
+    }
+    .container {
+        max-width: 1200px;
+        padding: 4em 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
     }
 }

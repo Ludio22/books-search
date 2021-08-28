@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
 html {
   background-color: #462a68;
 }
@@ -6,18 +7,12 @@ a {
   cursor: pointer;
 }
 
-img {
-  height: 195px;
-  -webkit-box-shadow: 15px 15px 10px #462a68;
-          box-shadow: 15px 15px 10px #462a68;
-  margin-bottom: 2em;
-  max-width: 190px;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-img:hover {
-  cursor: pointer;
+.error {
+  text-align: center;
+  margin-top: 4em;
+  font-size: 2em;
+  font-weight: bold;
+  color: #9a81b8;
 }
 
 .img__wrapper {
@@ -32,6 +27,7 @@ img:hover {
 
 select {
   padding: 6px 1em;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 1em;
   color: #9a81b8;
   border: 1px solid;
@@ -46,6 +42,20 @@ select:focus {
   color: #9a81b8;
   -webkit-transition: 1s;
   transition: 1s;
+}
+
+.search img {
+  height: 195px;
+  -webkit-box-shadow: 15px 15px 10px #462a68;
+          box-shadow: 15px 15px 10px #462a68;
+  margin-bottom: 2em;
+  max-width: 190px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.search img:hover {
+  cursor: pointer;
 }
 
 .search__form {
@@ -118,6 +128,7 @@ select:focus {
 
 .search__total {
   text-align: center;
+  font-family: "Noto Sans JP", sans-serif;
   padding: 2em 0;
 }
 
@@ -134,6 +145,7 @@ select:focus {
 }
 
 .search__book-card {
+  font-family: "Noto Sans JP", sans-serif;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 22%;
           flex: 0 1 22%;
@@ -194,6 +206,7 @@ select:focus {
 
 .search__input-container input {
   padding: 8px 1em;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 1.5em;
   color: #9a81b8;
   border: 1px solid;
@@ -227,5 +240,54 @@ select:focus {
 .search__input {
   width: 60%;
   padding: 0 1em;
+}
+
+.book img {
+  width: 486px;
+}
+
+.book__info {
+  font-family: "Noto Sans JP", sans-serif;
+  width: 50%;
+}
+
+.book .wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #baaacc;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1em;
+  background-color: #632ca5;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.book .wrapper .search__book-autors {
+  margin: 2em 0;
+}
+
+.book .wrapper div {
+  background-color: #462a68;
+  padding: 2em;
+  text-align: justify;
+  margin-top: 4em;
+}
+
+.book .container {
+  max-width: 1200px;
+  padding: 4em 0;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=styles.css.map */
