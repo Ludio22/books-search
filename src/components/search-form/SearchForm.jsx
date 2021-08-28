@@ -60,19 +60,21 @@ const SearchFrom = () => {
   return(
     <div className="search__form">
       <div className="mask"></div>
-      <div className="search__input-container">
-        <input 
-          className="search__input" 
-          type="text" 
-          placeholder="Enter book title" 
-          onChange={setName} 
-          value={state.bookName} 
-          onKeyPress={setOnKeyName} />
-        <input type="button" value="Go!" onClick={setBooks} />
-      </div>
-      <div className="search__select-container">
-        <Sorting options={state.orderOptions} checked={state.order} chenge={chengeOrder} />
-        <Sorting options={state.categoryOptions} checked={state.category} chenge={chengeCategory} />
+      <div className="container">
+        <div className="search__input-container">
+          <input 
+            className="search__input" 
+            type="text" 
+            placeholder="Enter book title" 
+            onChange={setName} 
+            value={state.bookName} 
+            onKeyPress={setOnKeyName} />
+          <input type="button" value="Go!" onClick={setBooks} />
+        </div>
+        <div className="search__select-container">
+          <Sorting options={state.orderOptions} checked={state.order} chenge={chengeOrder} />
+          <Sorting options={state.categoryOptions} checked={state.category} chenge={chengeCategory} />
+        </div>
       </div>
     </div>
   );

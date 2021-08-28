@@ -59,22 +59,11 @@ select:focus {
 }
 
 .search__form {
-  position: relative;
-  padding: 6em 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background-size: cover;
   background-position-y: -780px;
   background-attachment: fixed;
   background-image: url("../../media/bc.jpg");
+  position: relative;
 }
 
 .search__form .mask {
@@ -84,6 +73,19 @@ select:focus {
   background: rgba(0, 0, 0, 0.6);
   z-index: 2;
   top: 0;
+}
+
+.search__form .container {
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 6em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .search__input-container {
@@ -96,10 +98,9 @@ select:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 30%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .search__results {
@@ -198,7 +199,6 @@ select:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 30%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -238,17 +238,18 @@ select:focus {
 }
 
 .search__input {
-  width: 60%;
+  width: 100%;
+  margin-right: 1em;
   padding: 0 1em;
 }
 
 .book img {
-  width: 486px;
+  width: 46%;
 }
 
 .book__info {
   font-family: "Noto Sans JP", sans-serif;
-  width: 50%;
+  width: 46%;
 }
 
 .book .wrapper {
@@ -281,13 +282,77 @@ select:focus {
 
 .book .container {
   max-width: 1200px;
-  padding: 4em 0;
+  padding: 4em 3em;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .search__books {
+    -ms-grid-columns: (48%)[2];
+        grid-template-columns: repeat(2, 48%);
+  }
+  .book .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .book img {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  .book__info {
+    width: 100%;
+  }
+  .book .wrapper {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  .search__form .container {
+    max-width: 80%;
+  }
+  .search__books {
+    -ms-grid-columns: (95%)[1];
+        grid-template-columns: repeat(1, 95%);
+  }
+  .search__input {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: auto;
+  }
+  .search__input-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .search__input-container input {
+    font-size: 1.2em;
+  }
+  .search__input-container input[value="Go!"] {
+    margin-top: 1em;
+  }
+  .search__select {
+    padding: 6px 3px;
+  }
+  .book .container {
+    padding: 4em 1em;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

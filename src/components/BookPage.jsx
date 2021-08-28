@@ -39,10 +39,8 @@ const BookPage = () => {
             {error !== null ?
                 <div className="error">Error: {error}</div> 
                     :
-                <div className="container">
-                <div className="book__cover">
-                    <img src={img} alt="book" />
-                </div>
+                <div className="container">    
+                <img src={img} alt="book" />
                 {data !== null &&
                 <div className="book__info" >
                     <div className="wrapper" >
